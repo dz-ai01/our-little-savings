@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Little Savings ♡</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div>
+            <h1>Our Little Savings ♡</h1>
+            <p>A little progress, a shared dream.</p>
+        </div>
+        <div class="heart">♡</div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Halo, pejuang masa depan! 🌷</h2>
+            <p> Tabungan bareng nih, boleh di ambil pas tunangan dan nikah aja.</p>
+        </section>
+
+        <section class="summary">
+            <div class="card total-card">
+                <p>Total Tabungan Bersama</p>
+                <h2 id="totalBersama">Rp0</h2>
+                <span>Tabungan kita berdua ♡</span>
+            </div>
+
+            <div class="card">
+                <p>Tabungan Ainunnia Warohmah 🌸</p>
+                <h2 id="totalAinun">Rp0</h2>
+                <span>Target bulanan: Rp125.000</span>
+            </div>
+
+            <div class="card">
+                <p>Tabungan Dzikri Maulanal Hakim 🐻</p>
+                <h2 id="totalDzikri">Rp0</h2>
+                <span>Target bulanan: Rp300.000</span>
+            </div>
+        </section>
+
+        <section class="card target-section">
+            <h2>Target Tabungan Bulan Ini 🎯</h2>
+            <div id="targetAinun" class="target-item"></div>
+            <div id="targetDzikri" class="target-item"></div>
+            <p class="note">Target dihitung dari total setoran pada bulan berjalan.</p>
+        </section>
+
+        <section class="card form-section">
+            <h2>Catat Tabungan Baru 💰</h2>
+
+            <form id="formTabungan">
+                <label for="nama">Nama pengguna</label>
+                <select id="nama" required>
+                    <option value="">Pilih nama</option>
+                    <option value="Ainunnia Warohmah">Ainunnia Warohmah</option>
+                    <option value="Dzikri Maulanal Hakim">Dzikri Maulanal Hakim</option>
+                </select>
+
+                <label for="nominal">Nominal setoran (Rupiah)</label>
+                <input type="number" id="nominal" min="1"
+                    placeholder="Contoh: 125000" required>
+
+                <label for="keterangan">Keterangan</label>
+                <input type="text" id="keterangan"
+                    placeholder="Contoh: Tabungan bulan ini">
+
+                <button type="submit">Simpan Tabungan ♡</button>
+            </form>
+
+            <div id="pesan" class="message"></div>
+        </section>
+
+        <section class="card chart-section">
+            <h2>Grafik Tabungan Bulanan 📈</h2>
+            <canvas id="grafikTabungan"></canvas>
+        </section>
+
+        <section class="card history-section">
+            <h2>Riwayat Tabungan 📝</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Nominal</th>
+                            <th>Waktu</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="riwayatTabungan">
+                        <tr>
+                            <td colspan="4">Belum ada transaksi.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="stiker" class="sticker hidden">
+        <div class="sticker-content">
+            <div id="emojiStiker" class="sticker-emoji">🎉</div>
+            <h2>Yeay, berhasil! ♡</h2>
+            <p id="pesanStiker">Satu langkah lebih dekat dengan impian kita!</p>
+            <button id="tutupStiker" type="button">Lanjutkan</button>
+        </div>
+    </div>
+
+    <footer>
+        Dibuat dengan penuh harapan ♡
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
