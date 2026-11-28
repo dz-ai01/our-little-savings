@@ -499,6 +499,7 @@ function hitungBulanan(nama) {
         .reduce((total, item) => total + item.nominal, 0);
 }
 
+
 /* =====================================================
    10. GRAFIK
 ===================================================== */
@@ -584,6 +585,17 @@ function buatGrafik() {
 
     if (grafikBatang) return;
 
+    const opsiSumbuBulan = {
+        ticks: {
+            autoSkip: false,
+            maxRotation: 45,
+            minRotation: 45,
+            font: {
+                size: 10
+            }
+        }
+    };
+
     grafikBatang = new Chart(
         document.getElementById("grafikBatang"),
         {
@@ -608,6 +620,7 @@ function buatGrafik() {
             options: {
                 ...opsiGrafik,
                 scales: {
+                    x: opsiSumbuBulan,
                     y: {
                         beginAtZero: true,
                         ticks: {
@@ -673,6 +686,7 @@ function buatGrafik() {
             options: {
                 ...opsiGrafik,
                 scales: {
+                    x: opsiSumbuBulan,
                     y: {
                         beginAtZero: true,
                         ticks: {
